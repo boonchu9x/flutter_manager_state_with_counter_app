@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/bloc_infinite/event/comment_event.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/bloc_infinite/state/comment_state.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/model/comment_data.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/service/api_services.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/bloc_infinite/event/comment_event.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/bloc_infinite/state/comment_state.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/service/api_services.dart';
+
 
 class CommentBloc extends Bloc<CommentEvent, CommentState> {
   final NUMBER_OF_COMMENT_PER_PAGE = 20; //limit item in one page

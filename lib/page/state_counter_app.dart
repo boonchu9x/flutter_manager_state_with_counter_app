@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_manage_state_basic/bloc_counter/counter_bloc.dart';
-import 'package:flutter_manage_state_basic/bloc_counter/events/counter_events.dart';
 import 'package:flutter_manage_state_basic/components/appbar_general.dart';
+import 'package:flutter_manage_state_basic/counter_app/bloc_counter/counter_bloc.dart';
+import 'package:flutter_manage_state_basic/counter_app/events/counter_events.dart';
 
 class CounterAppScreen extends StatefulWidget {
   @override

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_manage_state_basic/components/appbar_general.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/bloc_infinite/comment_bloc.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/bloc_infinite/event/comment_event.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/bloc_infinite/state/comment_state.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/model/comment_data.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/service/api_services.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/bloc_infinite/comment_bloc.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/bloc_infinite/event/comment_event.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/bloc_infinite/state/comment_state.dart';
 import 'package:flutter_manage_state_basic/util/const.dart';
 
 class InfiniteAppScreen extends StatefulWidget {
@@ -144,16 +142,19 @@ class _InfiniteAppScreenState extends State<InfiniteAppScreen> {
   }
 
   //ITEM LISTVIEW
-  InkWell buildItemListView(CommentStateSuccess state, int index) {
-    return InkWell(
-      onTap: () {},
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 4.0),
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+  Padding buildItemListView(CommentStateSuccess state, int index) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        elevation: 1.0,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(
+            10.0,
           ),
-          elevation: 1.0,
+          onTap: () {},
           child: Container(
             padding: EdgeInsets.all(
               12.0,
@@ -172,7 +173,8 @@ class _InfiniteAppScreenState extends State<InfiniteAppScreen> {
                 SizedBox(
                   width: 14.0,
                 ),
-                Flexible( //sử dụng flexible cho parent gần nhất
+                Flexible(
+                  //sử dụng flexible cho parent gần nhất
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -189,7 +191,8 @@ class _InfiniteAppScreenState extends State<InfiniteAppScreen> {
                       SizedBox(
                         height: 8.0,
                       ),
-                      Flexible( //sử dụng flexible cho widget cần dùng
+                      Flexible(
+                        //sử dụng flexible cho widget cần dùng
                         child: Text(
                           state.comments[index].name,
                           overflow: TextOverflow.ellipsis,

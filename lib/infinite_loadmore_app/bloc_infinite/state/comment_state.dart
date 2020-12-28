@@ -1,5 +1,7 @@
+
+
 import 'package:equatable/equatable.dart';
-import 'package:flutter_manage_state_basic/infinite_loadmore/model/comment_data.dart';
+import 'package:flutter_manage_state_basic/infinite_loadmore_app/model/comment_data.dart';
 
 abstract class CommentState extends Equatable {
   const CommentState();

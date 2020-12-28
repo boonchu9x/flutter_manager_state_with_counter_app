@@ -14,3 +14,5 @@
 
 ## Login with Firebase and Google
 ![Image of Yaktocat](assets/images/login_firebase_app_map.png)  
+
+![Image of Yaktocat](assets/images/login_firebase_and_google.png)  
